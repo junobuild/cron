@@ -7,8 +7,8 @@ import {
   readQuery,
   updateQuery,
   writeCacheResponse,
-} from "./db";
-import {waitOneSecond} from "./utils";
+} from "./db.js";
+import {waitOneSecond} from "./utils.js";
 import DocumentData = firestore.DocumentData;
 
 type RequestParams = {req: express.Request};

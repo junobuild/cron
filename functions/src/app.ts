@@ -1,8 +1,8 @@
 import * as cors from "cors";
 import * as express from "express";
 import * as functions from "firebase-functions";
-import {sendEmail} from "./email";
-import {proxy} from "./proxy";
+import {sendEmail} from "./email.js";
+import {proxy} from "./proxy.js";
 
 const app = express();
 app.use(express.json());

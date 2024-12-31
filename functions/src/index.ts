@@ -1,6 +1,6 @@
 import {initializeApp} from "firebase-admin/app";
 import * as functionsV1 from "firebase-functions/v1";
-import {app} from "./app";
+import {app} from "./app.js";
 import {collectStatuses} from "./statuses/statuses.js";
 
 initializeApp();

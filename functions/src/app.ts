@@ -1,5 +1,5 @@
-import * as cors from "cors";
-import * as express from "express";
+import cors from "cors";
+import express from "express";
 import * as functions from "firebase-functions";
 import {sendEmail} from "./email.js";
 import {proxy} from "./proxy.js";

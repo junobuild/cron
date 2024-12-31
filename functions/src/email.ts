@@ -1,5 +1,4 @@
 import * as express from "express";
-import * as functions from "firebase-functions";
 import * as nodemailer from "nodemailer";
 import * as Mail from "nodemailer/lib/mailer";
 
@@ -7,9 +6,9 @@ import {firestore} from "firebase-admin";
 import {log} from "firebase-functions/logger";
 import DocumentData = firestore.DocumentData;
 
-const mailFrom: string = functions.config().mail.from;
-const mailPwd: string = functions.config().mail.pwd;
-const mailHost: string = functions.config().mail.host;
+const mailFrom: string = "TODO_to_be_removed";
+const mailPwd: string = "TODO_to_be_removed";
+const mailHost: string = "TODO_to_be_removed";
 
 export const sendEmail = async ({
   req: {body},

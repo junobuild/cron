@@ -79,14 +79,14 @@ const pollCachedResponse = async ({
 }): Promise<void> => {
   const cache = await readCachedResponse(key);
 
-  if (cache !== undefined) {
+  if (nonNullish(cache)) {
     res.json(cache);
     return;
   }
 
   const query = await readQuery(key);
-  if (query?.error !== undefined) {
-    res.status(500).send("The fetch to OpenAI failed.");
+  if (nonNullish(query?.error)) {
+    res.status(500).send("Proxying the request failed.");
     return;
   }
 

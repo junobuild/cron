@@ -10,7 +10,7 @@ export const sendEmail = async ({
 }: {
   req: express.Request;
 }): Promise<DocumentData> => {
-  const {from, to, subject, html} = body;
+  const {from, to, subject, html, text} = body;
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -18,7 +18,7 @@ export const sendEmail = async ({
       "Content-Type": "application/json",
       Authorization: `Bearer ${resendApiKey}`,
     },
-    body: JSON.stringify({from, to, subject, html}),
+    body: JSON.stringify({from, to, subject, html, text}),
   });
 
   if (!response.ok) {
